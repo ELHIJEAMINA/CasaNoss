@@ -1,0 +1,219 @@
+
+.bonow {
+  width: 100%;
+  height: 40vh; /* Hauteur courte pour la bannière */
+  background-image: url('http://localhost:3000/about.jpg'); /* Remplacez par l'URL de votre image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 6%;
+}
+
+.bonow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+}
+
+.bonow-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333; /* Couleur du texte */
+}
+
+.bonow h1 {
+  font-size: 3rem; /* Taille du h1 */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/*next sect*/
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
+  gap: 20px; /* Espacement entre les cartes */
+  padding: 50px;
+  margin-top: -4%;
+}
+
+.service-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 380px; /* Hauteur pour que l'image et le texte soient bien espacés */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Animation pour surélever légèrement la carte */
+}
+
+.service-image {
+  width: 100%;
+  height: 100%; /* L'image couvre toute la carte */
+  object-fit: cover; /* L'image s'adapte à la taille de la carte */
+}
+
+.service-title {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Centre le titre horizontalement */
+  font-size: 1.3em;
+  color: #333;
+  z-index: 1;
+  transition: opacity 0.3s ease; /* Transition douce pour l'effet "ghost" */
+  background-color: rgba(255, 255, 255, 0.8); /* Légère couleur de fond pour rendre le texte plus lisible */
+  padding: 1px 7px;
+  border-radius: 5px;
+  white-space: nowrap; /* Force le titre à rester sur une seule ligne */
+  overflow: hidden; /* Empêche le texte de déborder */
+  text-overflow: ellipsis; /* Si le texte est trop long, il sera coupé avec des points de suspension */
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+
+/* Effet ghost pour le titre au survol */
+.service-card:hover .service-title {
+  opacity: 0; /* Le titre disparaît au survol */
+}
+
+.service-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Couvre toute la carte */
+  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent */
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  opacity: 0; /* Cache la description au départ */
+  transition: opacity 0.3s ease;
+}
+.service-description p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  
+}
+/* Apparition de la description au survol */
+.service-card:hover .service-description {
+  opacity: 1; /* Affiche la description quand la carte est survolée */
+}
+
+/*title*/
+.pani {
+  text-align: center;
+  padding: 20px;
+}
+
+.pani h3 {
+  font-size: 1.5rem;
+  margin-bottom:1%;
+  color: #333;
+  position: relative;
+}
+
+
+.pani h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #E1AD01;
+}
+
+.pani h4 {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.pani h3::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Positionne le trait en haut */
+  left: 0; /* Positionne le trait à gauche */
+  height:5%; /* Épaisseur du trait */
+  width:4%; /* Longueur du trait */
+  background-color: #efa12e; /* Couleur du trait */
+  margin-left: 33%;
+  margin-top: 1%;
+  font-weight: bold;
+}
+/*nxt sect */
+
+.w-o-u h1 {
+  font-size: 2.5em;
+  color: #E1AD01; /* Couleur principale */
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+
+.w-o-u h2 {
+  font-size: 1.5em;
+  color: #555;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 30px; /* Espacement sous le sous-titre */
+}
+
+.w-o-u {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2% 8%;
+}
+
+.caprd {
+  background-color: #f7f7f7;
+  width: 30%; /* Largeur fixe pour maintenir 3 cartes par ligne */
+  padding: 1%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caprd:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.wicon {
+  font-size: 2.5em;
+  color: #efa12e;
+  margin-bottom: 15px;
+}
+
+.caprd h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.caprd p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Assurez-vous que les cartes restent 3 par ligne sur petits écrans */
+@media (max-width: 768px) {
+  .w-o-u {
+    justify-content: space-between;
+  }
+}

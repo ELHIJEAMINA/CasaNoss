@@ -1,0 +1,793 @@
+
+.home {
+  font-family: 'Open Sans', sans-serif;
+    width:  100vw; /* Assure que .home occupe toute la largeur de l'écran */
+    padding: 0; /* Aucune marge interne */
+    margin: 0; /* Aucune marge externe */
+    margin-top: -13%;
+   
+  }
+ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Remplit la hauteur de la fenêtre */
+  width: 100%; /* Remplit la largeur de la fenêtre */
+}
+.containya {
+  display: flex;
+  min-height: 80vh; 
+  width: 100%; 
+  padding: 0; 
+  margin: 0;
+}
+
+.image-section {
+  flex: 1; 
+  background-image: url('http://localhost:3000/background.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-radius: 2%;
+}
+
+.text-section {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+  background-color: rgba(249, 249, 249, 0.8);
+  box-sizing: border-box;
+}
+
+
+.text-section h1 {
+  font-size: 2em; /* Utilisation d'em pour la taille de police */
+  color: #333;
+  font-family: Helvetica, sans-serif;
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+.text-section h2 {
+  font-size: 2.2em; /* Utilisation d'em pour la taille de police */
+  color: #E1AD01;
+  margin-bottom: 3%;
+  font-weight: bold;
+}
+
+.text-section p {
+  font-size: 1.6em; /* Utilisation d'em pour la taille de police */
+  color: #555;
+  margin-top: 2%;
+}
+
+.name {
+  color: #E1AD01;
+  font-weight: bold;
+}
+.button-container {
+  display: flex;
+  gap: 1rem; /* Espace entre les boutons */
+  justify-content: center; /* Centrer les boutons horizontalement */
+}
+
+.long-button {
+  width: 200px; /* Largeur plus longue */
+  height: 50px; /* Hauteur des boutons */
+  background-color:   #E1AD01 ; /* Couleur de fond */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center; /* Centre le texte verticalement */
+  justify-content: center; /* Centre le texte horizontalement */
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+
+}
+.long-button a{
+  color: #f7f7f7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.long-button:hover {
+  background-color: #d48f1a; /* Couleur au survol */
+}
+
+/* Bouton transparent avec bordure blanche */
+.transparent-button {
+  background-color: transparent;
+  border: 2px solid #d48f1a; /* Bordure blanche */
+  color: black;
+
+}
+.transparent-button a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.transparent-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fond transparent au survol */
+}
+
+/*next section*/
+.banner {
+  background-color: rgb(255, 255, 255);
+  height: 48vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top:-3%; /* Ajustement de la marge */
+  gap: 6%;
+}
+
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  position: relative;
+  padding-left: 15px;
+  
+}
+
+.contact-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2px;
+  height: 70%;
+  background-color: #ccc; /* Couleur du séparateur */
+  margin-top: -2%;
+}
+
+.contact-item:first-child::before {
+  display: none; /* Pas de séparateur avant le premier élément */
+}
+
+.icon {
+  margin-right: 10px;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.text {
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/*next section*/
+.card-container {
+  display: flex; /* Aligne les cartes horizontalement */
+  flex-wrap: nowrap; /* Empêche les cartes de passer à la ligne suivante */
+  justify-content: space-around; /* Espace égal entre les cartes */
+  overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+  margin: 3% 0; /* Marge autour du conteneur */
+}
+
+.card {
+  background-color: white; /* Couleur de fond de la carte */
+  border: 1px solid transparent; /* Bordure transparente */
+  border-radius: 8%; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(239, 161, 46, 0.6); /* Ombre pour l'effet de profondeur */
+  text-align: center; /* Centre le texte */
+  padding: 2%; /* Padding à l'intérieur de la carte */
+  margin: 2%; /* Espace autour de chaque carte */
+  width: 15%; /* Largeur en pourcentage */
+  height: 20%; /* Hauteur en pourcentage */
+  box-sizing: border-box; /* Applique le border-box */
+  transition: transform 0.3s; /* Transition pour l'effet de survol */
+}
+
+
+.icons {
+  width: 55%; /* Taille de l'icône relative à la carte */
+  height: auto; /* Hauteur automatique pour garder le ratio d'aspect */
+  margin-bottom: 5%; /* Espace entre l'icône et le texte */
+  margin-left: 25%;
+}
+
+.card h4 {
+  margin: 5% 0; /* Espace autour du titre */
+  font-size: 1em;
+  color: #555; /* Couleur du texte */
+  margin-bottom: -10%;
+  margin-right: 5%;
+}
+
+
+/*next section*/
+
+.contain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 2%;
+  margin-top: -7%;
+}
+
+.left-section {
+  flex: 1.4; /* Prend plus de place que la section de droite */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  color: #555;
+  background-color: rgba(249, 249, 249, 0.8); /* Couleur de fond pour le texte */
+  height: 75%; /* Ajuste la hauteur */
+  margin-left: 2%;
+  width: 50%;
+}
+
+.left-section h3 {
+  font-size: 2rem;
+  color: #efa12e;
+  margin-bottom:2%;
+}
+
+.left-section h1 {
+  font-size: 2.2em;
+  margin-bottom:13%;
+}
+
+.left-section p {
+  font-size: 1.2rem;
+  margin-top:-11%;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+.cta-button {
+  background-color: #efa12e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d48f1a;
+}
+.sp-cont{
+
+  font-weight: bold;
+  color: #E1AD01;
+  text-transform: uppercase; /* Ajoute cette ligne si tu veux aussi que les paragraphes soient en majuscule */
+}
+
+.right-section {
+  flex: 1; /* Prend moins de place que la section de gauche */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  height: 80%; /* Ajuste la hauteur */
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Espacement entre les images */
+}
+
+.image-top img, .image-overlay img {
+  width: 80%; /* Laisse les images remplir leur conteneur */
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.image-overlay img {
+  margin-left: -19%;
+  margin-top: -20%;
+  width: 77%;
+}
+
+.image-top img {
+  margin-left: 19%;
+}
+/*next section*/
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50vh; /* Ajuste selon tes besoins */
+  padding: 1%;
+  margin-top: 10%;
+  margin-bottom: 15%;
+}
+
+.abo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rounded-image {
+  width: 70%; /* Ajuste la taille de l'image en pourcentage */
+  border-radius: 30%; /* Arrondit l'image */
+  object-fit: cover; /* S'assure que l'image reste bien cadrée */
+  margin-right: -20%; 
+}
+
+.abowt {
+  flex: 1;
+  padding: 1%; /* Ajuste le padding avec des pourcentages */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(249, 249, 249, 0.8); /* Couleur de fond pour le texte */
+  color: white;
+  border-radius: 8px;
+  margin-right: 6%;
+}
+.abowt h1 {
+  font-size: 200%; /* Converti la taille en pourcentage */
+  margin-bottom: 3%;
+  color: #E1AD01;
+}
+.abowt h3 {
+  font-size:1.5em; /* Converti la taille en pourcentage */
+  margin-bottom: 3%;
+  color: #333;
+}
+
+.abowt p {
+font-size: 1.01em; /* Converti la taille en pourcentage */
+  margin-bottom: 10%;
+  color: #333;
+}
+
+.abowt a {
+  width:97%; /* Largeur plus longue */
+  height: 30px; /* Hauteur des boutons */
+  background-color:   #E1AD01 ; /* Couleur de fond */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center; /* Centre le texte verticalement */
+  justify-content: center; /* Centre le texte horizontalement */
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin-bottom: 2%;
+  text-decoration: none;
+}
+
+.btn-abowt:hover {
+  background-color: #d48f1a;
+}
+/*next section*/
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:30%;
+  padding: 3%;
+ 
+}
+
+.lefti {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:1.7%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  border-radius: 35px;
+}
+
+.lefti h3 {
+  font-size: 2em;
+  color: #E1AD01;
+  margin-bottom:1%;
+}
+
+.lefti h1 {
+font-size: 2.1em;
+  margin-bottom: 1.5%;
+}
+
+.lefti p {
+  font-size: 1.3em;
+  margin-bottom: 5%;
+}
+.pub-buttons {
+  display: flex;
+  flex-direction: column; /* Place les boutons verticalement */
+  margin-left: 80%;
+  margin-top: -17%;
+  margin-bottom: 2%;
+}
+.pub-button a{
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.pub-button {
+  width:87%; /* Largeur plus longue */
+  height: 50px; /* Hauteur des boutons */
+  background-color:   #E1AD01 ; /* Couleur de fond */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center; /* Centre le texte verticalement */
+  justify-content: center; /* Centre le texte horizontalement */
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+.pub-buttan{
+  width: 87%; /* Largeur plus longue */
+  height: 50px; /* Hauteur des boutons */
+  background-color:   white ; /* Couleur de fond */
+  color: black;
+  border: 2px solid #E1AD01;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center; /* Centre le texte verticalement */
+  justify-content: center; /* Centre le texte horizontalement */
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin-top: 7%;
+}
+.pub-buttan a{
+  text-decoration: none;
+  color: #000;
+}
+
+.pub-button:hover {
+  background-color: #d48f1a;/*refaire*/
+}
+/*next section */
+.panel {
+  text-align: center;
+  padding: 20px;
+}
+
+.panel h3 {
+  font-size: 1.5rem;
+  margin-bottom:1%;
+  color: #333;
+  position: relative;
+}
+
+
+.panel h3::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Positionne le trait en haut */
+  left: 0; /* Positionne le trait à gauche */
+  height:5%; /* Épaisseur du trait */
+  width:4%; /* Longueur du trait */
+  background-color: #efa12e; /* Couleur du trait */
+  margin-left: 34%;
+  margin-top: 1%;
+  font-weight: bold;
+}
+.panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #E1AD01;
+}
+
+.panel h4 {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2vw; /* Espace entre les cartes */
+  justify-content: center; /* Centre les cartes horizontalement */
+}
+
+.carda {
+  position: relative;
+  width: calc(33.33% - 1.2vw); /* Trois cartes par ligne, avec espace entre elles */
+  height: 20vw; /* Hauteur de la carte, ajustable selon besoin */
+  overflow: hidden; /* Masque le contenu débordant */
+  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Ombre de la carte */
+}
+
+.carda img {
+  width: 100%; /* Occupe toute la largeur de la carte */
+  height: 100%; /* Occupe toute la hauteur de la carte */
+  object-fit: cover; /* Couvre toute la carte tout en gardant les proportions */
+  filter: brightness(70%);
+}
+
+.carda p {
+  position: absolute;
+  bottom: 1vw; /* Espace du bas */
+  right: 1vw; /* Espace à droite */
+  font-family: 'Arial', sans-serif;
+  color: white;
+  padding: 0.5vw;
+  border-radius: 0.4vw;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+/*next section */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  align-items: stretch; /* Aligne les deux côtés avec la même hauteur */
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 49%; /* Largeur de la partie gauche */
+}
+
+.top-images, .bottom-images {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Espace entre les images du haut et du bas */
+}
+
+.top-images img, .bottom-images img {
+  width: 48%; /* Chaque image prend environ 50% de la largeur */
+}
+.right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement le contenu */
+}
+.text-sections {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre verticalement le contenu */
+  height:68vh; /* Hauteur fixe pour correspondre à l'image-section */
+  background-color: rgba(249, 249, 249, 0.8); /* Couleur de fond pour le texte */
+ 
+
+}
+
+.text-sections h3, 
+.text-sections h1, 
+.text-sections p {
+  margin: 1; /* Supprime les marges par défaut */
+  padding: 1; /* Supprime les padding par défaut */
+  text-align: left; /* Assure que le texte est aligné à gauche */
+
+}
+.text-sections h1{
+  color: black;
+  margin-left: 4%;
+  font-size: 1.4em;
+  opacity: 0.7;
+}
+.text-sections h3{
+  color: #E1AD01;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-left: 4%;
+  margin-top: -7%;
+}
+.why-choose-us {
+  margin-bottom:-4%; /* Espace entre les raisons et le bouton */
+}
+
+.wcu{
+font-weight: bold;
+color:#555;
+}
+
+.reason {
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px; /* Espace entre les phrases */
+}
+
+.icen {
+  font-size: 1em; /* Taille de l'icône */
+font-weight: bold;
+  margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+.reason p {
+  margin: 0; /* Supprime les marges par défaut du paragraphe */
+  font-size: 1.3em; /* Taille de l'icône */
+ 
+}
+.pqnous{
+  color: #E1AD01;
+}
+button {
+  padding: 10px 20px;
+  background-color: #FCDC12; /* Couleur jaune pour le bouton */
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  align-self: flex-start; /* Aligne le bouton à gauche */
+  margin-top:10%; /* Espace au-dessus du bouton */
+}
+
+button:hover {
+  background-color: #efa12e; /* Changement de couleur au survol */
+}
+/*next section*/
+.frame {
+  position: relative;
+  width: 100vw; /* Largeur maximale */
+  height: 100vh; /* Hauteur maximale */
+  overflow: hidden; /* Cache le débordement */
+}
+
+.background-image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover; /* Couvre toute la surface */
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(70%);
+}
+
+.circle-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centre la div */
+  width: 50vw; /* Taille du cercle */
+  height: 50vw;
+  max-width: 400px; /* Taille maximale du cercle */
+  max-height: 400px;
+  background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond du cercle avec transparence */
+  border-radius: 50%; /* Forme de cercle */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
+}
+
+.circle-content h1 {
+  font-size: 1.7em;
+  margin-bottom:2%;
+  color: #E1AD01;
+}
+
+.circle-content h3 {
+  font-size: 1.6em;
+  margin-bottom:6%;
+}
+
+.circle-content p {
+  font-size: 1.2em;
+  margin-bottom:6%;
+}
+
+.circle-content button {
+  background-color: #E1AD01;
+  color: white;
+  border: none;
+  padding:3% 6%;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left:18%;
+
+}
+.frame a{
+  text-decoration: none;
+  color: white;
+}
+
+.circle-content button:hover {
+  background-color: #d48f1a;
+}
+/*next section*/
+.contact-cantainer {
+  text-align: center;
+  padding: 5% 5%;
+  background-color: #f7f7f7;
+  margin-bottom: 4%;
+  margin-top: 6%; /* Remplacé -15% par une marge positive pour éviter les perturbations */
+}
+
+.contact-cantainer h2 {
+  font-size: 2.5rem; /* Utilisation de rem au lieu de em */
+  color: #E1AD01;
+  margin-bottom: 2%;
+}
+
+.contact-cantainer p {
+  font-size: 1.5rem; /* Utilisation de rem pour une taille plus contrôlée */
+  margin-bottom: 1.5%;
+  color: #555;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-wrap: wrap; /* Ajouté pour que les cartes puissent passer sur plusieurs lignes si nécessaire */
+}
+
+.cardcont {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1%;
+  text-align: center;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ison {
+  font-size: 3rem;
+  margin-bottom: 2%;
+  color: #E1AD01;
+  font-weight: bold;
+}
+
+.cardcont h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+
+.cardcont p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Responsive: Ajustement pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column; /* Les cartes se disposeront en colonne sur petits écrans */
+    gap: 1em; /* Moins d'espace entre les cartes pour petits écrans */
+  }
+
+  .cardcont {
+    padding: 2%;
+  }
+
+  .contact-container h2, .contact-container p {
+    font-size: 1.8rem; /* Réduction de la taille des polices sur petits écrans */
+  }
+}

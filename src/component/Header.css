@@ -1,0 +1,90 @@
+/* Header Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Pour que les paddings ne débordent pas */
+}
+/* Pour s'assurer que le contenu soit en dessous du header */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding-top: 8%; /* Utilisation de pourcentage pour l'espacement sous le header */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5%; /* Utilisation de % pour plus de flexibilité */
+  background-color: rgba(255, 255, 255, 0.8); /* Blanc avec opacité */
+  z-index: 5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width:13%; /* Réduire la taille du logo */
+  height:28%; /* Assurer une taille fixe */
+  border-radius: 50%; /* Rendre le logo circulaire */
+  object-fit: cover; /* S'assure que l'image garde son aspect dans le cercle */
+}
+.nav-links a {
+  margin-left: -50%; /* Utilisation de pourcentages pour l'espacement entre les liens */
+  color:#F0C300; /* Jaune */
+  text-decoration: none;
+  font-size: 1.3rem; /* Remplace les pixels par rem pour les tailles de texte */
+  font-weight: bold;
+  margin-left: 70px;
+  
+}
+
+.nav-links a:hover {
+  color: #000; /* Blanc au survol */
+  opacity: 0.7;
+  
+}
+
+.nav-links a.reservation {
+  background-color: #E1AD01; /* Couleur de fond jaune */
+  color: white; /* Couleur du texte (blanc) */
+  padding: 1% 2%; /* Espace intérieur en pourcentage */
+  border-radius: 7%; /* Coins arrondis en pourcentage */
+  text-align: center; /* Centrer le texte à l'intérieur */
+  text-decoration: none; /* Supprimer la décoration de lien */
+  font-weight: bold; /* Texte en gras */
+  font-size: 1.5vw; /* Taille du texte relative à la largeur de la fenêtre */
+}
+
+.nav-links a.reservation:hover {
+  background-color: #e6b800; /* Couleur un peu plus foncée au survol */
+}
+/* Styles pour la section Home */
+.home {
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.home h1 {
+  font-size: 5vw; /* Utilisation de vw pour la taille du texte, basée sur la largeur de l'écran */
+  z-index: 2;
+}
+
