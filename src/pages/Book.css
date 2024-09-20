@@ -3,7 +3,7 @@
 .bano {
   width: 100%;
   height: 40vh; /* Hauteur courte pour la bannière */
-  background-image: url('http://localhost:3000/book.jpg'); /* Remplacez par l'URL de votre image */
+  background-image: url('http://localhost:3000/book .jpg'); /* Remplacez par l'URL de votre image */
   background-size: cover;
   background-position: center;
   position: relative;
