@@ -20,22 +20,14 @@ function Footer() {
             data-mdb-ripple-init
             className="btn text-white btn-floating m-1"
             style={{ backgroundColor: '#ac2bac' }}
-            href="https://www.instagram.com/bio_cleaners_services"
+            href="https://www.instagram.com/casa_noss?igsh=dm42eTIxZXpreGk4"
             role="button"
           >
             <i className="fab fa-instagram"></i>
           </a>
 
 
-          <a
-            data-mdb-ripple-init
-            className="btn text-white btn-floating m-1"
-            style={{ backgroundColor: '#333333' }}
-            href="https://www.tiktok.com/@bio_cleaners "
-            role="button"
-          >
-            <i className="fab fa-tiktok"></i>
-          </a>
+      
         </div>
         <div className="footer-content">
           <div className="footer-logo">
