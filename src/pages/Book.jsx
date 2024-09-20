@@ -25,7 +25,7 @@ function Book() {
         const whatsappMessage = `Réservation de service:\nNom: ${nom}\nVille: ${ville}\nTéléphone: ${telephone}\nEmail: ${email}\nQuartier: ${quartier}\nService: ${service}\nDate: ${date}\nNombre de chambres: ${chambres}\nMode de communication: ${communication}\nInformations supplémentaires: ${informations}`;
 
         // URL WhatsApp avec le message encodé
-        const whatsappUrl = `https://wa.me/212622309354?text=${encodeURIComponent(whatsappMessage)}`;
+        const whatsappUrl = `https://wa.me/212655760051?text=${encodeURIComponent(whatsappMessage)}`;
         window.open(whatsappUrl, '_blank');
       });
     }

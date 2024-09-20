@@ -19,7 +19,7 @@ const Contact = () => {
         const whatsappMessage = `Nom: ${name}%0AVille: ${city}%0AService: ${service}%0ATéléphone: ${phone}%0AMessage: ${message}`;
 
         // Open WhatsApp with the message
-        const whatsappUrl = `https://wa.me/212622309354?text=${whatsappMessage}`;
+        const whatsappUrl = `https://wa.me/212655760051?text=${whatsappMessage}`;
         window.open(whatsappUrl, '_blank');
       });
     }
