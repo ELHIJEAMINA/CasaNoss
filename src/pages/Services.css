@@ -2,7 +2,7 @@
 .bonow {
   width: 100%;
   height: 40vh; /* Hauteur courte pour la bannière */
-  background-image: url('http://localhost:3000/about.jpg'); /* Remplacez par l'URL de votre image */
+  background-image: url('https://casa-noss.vercel.app/about.jpg'); /* Remplacez par l'URL de votre image */
   background-size: cover;
   background-position: center;
   position: relative;

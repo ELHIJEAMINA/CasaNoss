@@ -88,3 +88,124 @@ html, body {
   z-index: 2;
 }
 
+
+/* Remove yellow background when menu is opened */
+.nav-links a.reservation {
+  background-color: #E1AD01;
+  color: white;
+  padding: 1% 2%;
+  border-radius: 7%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav-links a.reservation.no-bg {
+  background-color: transparent;
+  color: #F0C300;
+}
+
+.nav-links a.reservation:hover {
+  background-color: #e6b800;
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon-bar,
+.close-icon {
+  font-size: 2rem;
+  color: black;
+  z-index: 2000;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999; /* Ensure menu is above everything */
+    padding-top: 100px; /* Padding to prevent menu from covering the logo */
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom:8% ;
+    
+  }
+
+  .nav-links a.reservation {
+    background-color: transparent;
+    color: #000;
+    font-size: 1.5rem;
+
+  }
+
+  /* Menu icon is displayed on mobile */
+  .menu-icon {
+    display: block;
+    z-index: 2000;
+  }
+
+  /* Styling for close (X) and menu (☰) icons */
+  .menu-icon-bar {
+    display: inline-block;
+  }
+
+  .close-icon {
+    display: inline-block;
+  }
+}
+/*tabllette*/
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; /* Ajuste la position */
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Légèrement plus opaque */
+    display: none; /* Cache par défaut */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex; /* Affiche le menu quand il est ouvert */
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  .menu-icon {
+    display: block; /* Affiche l'icône du menu */
+  }
+
+  /* Optionnel : masque le logo quand le menu est ouvert */
+  .logo img.menu-open {
+    display: none; /* Masque le logo */
+  }
+}

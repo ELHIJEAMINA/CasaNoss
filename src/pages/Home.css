@@ -29,7 +29,7 @@ html, body {
 
 .image-section {
   flex: 1; 
-  background-image: url('http://localhost:3000/background.jpg');
+  background-image: url('https://casa-noss.vercel.app/background.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -168,11 +168,22 @@ html, body {
   font-weight: bold;
   opacity: 0.9;
 }
-
+/*media querie du benner*/
+/* Media query pour petits écrans (téléphones) */
 @media (max-width: 768px) {
-  .contact-info {
-    flex-direction: column;
-    gap: 15px;
+  .banner {
+    display: none; /* Cache la bannière sur les écrans de moins de 768px */
+  }
+}
+/* Media query pour tablettes (visible sur les écrans entre 768px et 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    display: none;/* Assure que la bannière est visible sur tablette */
+  }
+  }
+@media (max-width: 600px) {
+  .banner {
+    display: none; /* Cache la bannière sur les mini-tablettes */
   }
 }
 /*next section*/

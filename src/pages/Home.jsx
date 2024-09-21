@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faPhoneAlt, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'; 
 
+
+
 function Home() {
+  
   return (
     <div className='Home'>
       {/* Banniere en haut */}
       <div className='banner'>
-        
           <div className="contact-item">
             <FontAwesomeIcon icon={faPhoneAlt} className='icon' />
             <span className='text'>Téléphone :(+212) 7 72 86 51 09</span>

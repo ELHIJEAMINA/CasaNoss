@@ -1,23 +1,35 @@
-import React from 'react';
-import './Header.css'; // Créez un fichier CSS séparé pour les styles
+import React, { useState } from 'react';
+import './Header.css';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-
-
-<header className="header">
+    <header className="header">
       <div className="logo">
         <img src="logo.jpg" alt="Logo" loading="lazy" />
       </div>
-      <nav className="nav-links">
-  <a href="/">Acceuil</a>
-  <a href="/AboutUs">Apropos</a>
-  <a href="/Services">Services</a>
-  <a href="/Contact">Contact</a>
-  <a href="/Book" className="reservation">Réservation</a> {/* Ajout de la classe "reservation" */}
-</nav>
-</header>
-    
+      <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+        <a href="/">Acceuil</a>
+        <a href="/AboutUs">Apropos</a>
+        <a href="/Services">Services</a>
+        <a href="/Contact">Contact</a>
+        <a href="/Book" className={`reservation ${isMenuOpen ? 'no-bg' : ''}`}>
+          Réservation
+        </a>
+      </nav>
+      <div className="menu-icon" onClick={toggleMenu}>
+        {isMenuOpen ? (
+          <span className="close-icon">X</span>
+        ) : (
+          <span className="menu-icon-bar">☰</span>
+        )}
+      </div>
+    </header>
   );
 };
 

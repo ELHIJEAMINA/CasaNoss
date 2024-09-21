@@ -62,7 +62,7 @@
 }
 /*nexts*/
 .contact-container {
-  background-image: url('http://localhost:3000/fauteul.jpg'); /* Remplacez par l'URL de votre image */
+  background-image: url('https://casa-noss.vercel.app/fauteul.jpg'); /* Remplacez par l'URL de votre image */
   background-size: cover;
   background-position: center;
   padding: 50px;
