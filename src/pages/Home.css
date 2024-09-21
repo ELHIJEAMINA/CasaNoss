@@ -34,6 +34,13 @@ html, body {
   background-position: center; 
   background-repeat: no-repeat; 
   border-radius: 2%;
+  image-rendering: crisp-edges;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .image-section {
+    background-image: url('https://casa-noss.vercel.app/background@2x.jpg'); /* Image haute résolution pour les écrans Retina */
+  }
 }
 
 .text-section {
@@ -176,7 +183,7 @@ html, body {
   }
 }
 /* Media query pour tablettes (visible sur les écrans entre 768px et 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .banner {
     display: none;/* Assure que la bannière est visible sur tablette */
   }
