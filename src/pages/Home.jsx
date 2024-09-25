@@ -125,38 +125,38 @@ function Home() {
     </div>
   </div>
 </div>
-<div class="panel">
+<div className="panel">
   
   <h3> <strong> Découvrez Nos Services</strong></h3>
   <h1>Services de Nettoyage Professionnels</h1>
   <h4><strong>Explorez nos services de nettoyage professionnels adaptés à vos besoins à Agadir, Taroudant et Marrakech.</strong></h4>
   
-  <div class="services">
-    <div class="carda">
+  <div className="services">
+    <div className="carda">
       <a href="/Services">
         <img src="burreau v2.jpg" alt="Service 1" loading="lazy"/>
         <p>Nettoyage de bureaux</p>
       </a>
     </div>
-    <div class="carda">
+    <div className="carda">
       <a href="/Services">
         <img src="carpet.jpg" alt="Service 2" loading="lazy"/>
         <p>Nettoyage de canapé</p>
       </a>
     </div>
-    <div class="carda">
+    <div className="carda">
       <a href="/Services">
         <img src="commerce.jpg" alt="Service 3" loading="lazy"/>
         <p>Nettoyage de commerces</p>
       </a>
     </div>
-    <div class="carda">
+    <div className="carda">
       <a href="/Services">
         <img src="jar.jpg" alt="Service 4" loading="lazy"/>
         <p>Entretien des jardins</p>
       </a>
     </div>
-    <div class="carda">
+    <div className="carda">
       <a href="/Services">
         <img src="cordiste.jpg" alt="Service 5" loading="lazy"/>
         <p>Cordistes des vitres</p>
@@ -286,6 +286,27 @@ function Home() {
       <h3>Notre Bureau</h3>
       <p>Visitez-nous à <strong>Agadir</strong></p>
     </div>
+  </div>
+</div>
+<div className="Contner">
+  <div className="locations-section">
+    {/* Lien qui redirige vers Google Maps */}
+    <a
+      href="https://www.google.com/maps/place/30%C2%B024'18.5%22N+9%C2%B003'27.4%22W"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ display: 'block' }} // Assure que le lien couvre la carte
+    >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d220505.65770190198!2d-9.482451107180799!3d30.28264669106126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDI0JzE4LjUiTiA5wrAzMycyNy40Ilc!5e0!3m2!1sfr!2sma!4v1723663069281!5m2!1sfr!2sma"
+        width="1500"
+        height="350"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </a>
   </div>
 </div>
     </div>

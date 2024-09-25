@@ -83,11 +83,21 @@
 
 }
 .footer-contact h3{
-   margin-left: 33%;
+   margin-left: 3%;
    font-size: 1.7em;
+   text-align: center;
+   font-family: italic;
+   color: #fff;
+  text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.6); /* Ombre de texte jaune */
+  opacity: 0.9;
 }
 .footer-links h3{
   font-size: 1.7em;
+  font-family: italic;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(255, 215, 0, 0.8); /* Ombre de texte jaune */
+  opacity: 0.85;
+
 }
 .footer-basic .footer-links li,
 .footer-basic .footer-contact li {
@@ -102,45 +112,43 @@
   color: white;
 }
 
-@media screen and (max-width: 576px) {
-  .footer-basic {
-      padding: 5px 0;
-      text-align: center;
-  }
+
+/* Pour les tablettes et les téléphones (max-width: 768px) */
+@media (max-width: 768px) {
   .footer-basic .footer-content {
-      flex-direction: column;
+    flex-direction: column;
+    align-items: center;
   }
-  .footer-basic .footer-logo img {
-      margin: 0 auto 10px;
+
+  .footer-basic .footer-contact,
+  .footer-basic .footer-links {
+    text-align: center;
+    margin-bottom: 15px; /* Légère marge entre les sections */
   }
-  .footer-basic .footer-links ul,
-  .footer-basic .footer-contact ul {
-      align-items: center;
+
+  .footer-basic .social {
+    margin-top: 5px;
   }
-  .footer-basic .copyright {
-      margin-top: 10px;
-      font-size: 14px;
+  .footer-logo{
+    margin-top: 3%;
   }
-  .footer-basic .footer-contact {
-    text-align: center; /* Centre le texte sur mobile */
-    margin-left: 0; /* Supprime la marge à gauche sur mobile */
-}
 }
 
-@media screen and (min-width: 577px) and (max-width: 992px) {
-  .footer-basic {
-      padding: 15px 0;
-  }
+/* Media Query pour les grandes tablettes */
+@media (min-width: 768px) and (max-width: 1024px) {
   .footer-basic .footer-content {
-      flex-direction: row;
-      justify-content: space-around;
+    flex-direction: column; /* Empile les sections verticalement */
+    align-items: center;
+    padding: 10px 0; /* Réduit le padding pour minimiser l'espace */
   }
-  .footer-basic .footer-links ul,
-  .footer-basic .footer-contact ul {
-      align-items: center;
-  }
+
+  .footer-basic .footer-logo,
+  .footer-basic .footer-links,
   .footer-basic .footer-contact {
-    text-align: center; /* Centre le texte sur tablette */
-    margin-left: 0; /* Supprime la marge à gauche sur tablette */
-}
+    margin-bottom: 10px; /* Réduit l'espace entre les sections */
+  }
+
+  .footer-basic .social {
+    margin-top: 5px; /* Réduit l'espace en haut des icônes sociales */
+  }
 }

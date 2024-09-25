@@ -120,7 +120,6 @@ html, body {
   color: black;
   z-index: 2000;
 }
-
 /* Mobile and Tablet Styles */
 @media (max-width: 768px) {
   .nav-links {
@@ -136,8 +135,8 @@ html, body {
     justify-content: center;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 999; /* Ensure menu is above everything */
-    padding-top: 100px; /* Padding to prevent menu from covering the logo */
+    z-index: 999;
+    padding-top: 100px; /* Prevents menu from covering the logo */
   }
 
   .nav-links.open {
@@ -148,15 +147,17 @@ html, body {
     margin: 15px 0;
     font-size: 1.5rem;
     color: #000;
-    margin-bottom:8% ;
-    
+    text-align: center; /* Center-align the links */
   }
 
+  /* Ensure the reservation button is styled similarly to other links */
   .nav-links a.reservation {
-    background-color: transparent;
-    color: #000;
+    background-color: #E1AD01; /* Background color for reservation button */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 1.5rem;
-
+    margin-bottom: 8%; /* Space below the reservation button */
   }
 
   /* Menu icon is displayed on mobile */
@@ -165,7 +166,7 @@ html, body {
     z-index: 2000;
   }
 
-  /* Styling for close (X) and menu (☰) icons */
+  /* Close (X) and menu (☰) icons */
   .menu-icon-bar {
     display: inline-block;
   }
@@ -174,16 +175,16 @@ html, body {
     display: inline-block;
   }
 }
-/*tabllette*/
+
 /* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav-links {
     position: absolute;
-    top: 70px; /* Ajuste la position */
+    top: 70px; /* Adjust the position */
     right: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Légèrement plus opaque */
-    display: none; /* Cache par défaut */
+    background-color: rgba(255, 255, 255, 0.9);
+    display: none; /* Hidden by default */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -191,7 +192,7 @@ html, body {
   }
 
   .nav-links.open {
-    display: flex; /* Affiche le menu quand il est ouvert */
+    display: flex;
   }
 
   .nav-links a {
@@ -200,12 +201,20 @@ html, body {
     color: #000;
   }
 
-  .menu-icon {
-    display: block; /* Affiche l'icône du menu */
+  .nav-links a.reservation {
+    background-color: #E1AD01;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
   }
 
-  /* Optionnel : masque le logo quand le menu est ouvert */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Optionally hide logo when the menu is open */
   .logo img.menu-open {
-    display: none; /* Masque le logo */
+    display: none;
   }
 }
+

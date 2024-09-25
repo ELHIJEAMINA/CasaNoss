@@ -21,21 +21,6 @@
   height: 100%;
   filter: brightness(60%);
 }
-
-.bono-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff; /* Couleur du texte */
-}
-
-.bono h1 {
-  font-size: 3rem; /* Taille du h1 */
-  font-weight: bold;
-  text-transform: uppercase;
-}
 /*next section*/
 .folder {
   display: flex;
@@ -118,7 +103,9 @@
   .left-text, .right-images {
       width: 100%;
   }
-
+  .right-images{
+    margin-top: 10%;
+  }
   .text-container {
       padding: 5%;
   }
@@ -130,6 +117,31 @@
   .small-image {
       width: 100%;
       margin-bottom: 2%;
+  }
+}
+/* Media queries pour les grandes tablettes (entre 768px et 1024px) - même design que desktop */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .folder {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8%;
+  }
+
+  .left-text {
+      width: 70%; /* Largeur de la partie gauche */
+  }
+
+  .right-images {
+      width: 26%; /* Largeur de la partie des images */
+  }
+
+  .text-container h1 {
+      font-size: 2.5vw; /* Taille du texte adaptée aux tablettes */
+  }
+
+  .text-container p {
+      font-size: 1.1em; /* Taille du texte légèrement réduite */
   }
 }
 /*next section*/
@@ -269,5 +281,69 @@
 
   .testimonial-card {
     width: 90%;
+  }
+}
+/* Media queries pour les grandes tablettes (entre 768px et 1024px) - comme desktop */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .testimonials-container {
+    flex-wrap: wrap; /* Garde les cartes sur une seule ligne si possible */
+    justify-content: center; /* Centre les cartes */
+  }
+
+  .testimonial-card {
+    width: 22%; /* Largeur de carte similaire à celle du desktop */
+  }
+}
+/*next section cards container */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-container {
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+    justify-content: center; /* Centre les cartes dans le conteneur */
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+    margin-top: 20%;
+  }
+
+  .card {
+    width: 24%; /* Largeur augmentée pour les tablettes */
+    height: auto; /* Ajuste la hauteur selon le contenu */
+    margin: 2% 1%; /* Espace plus petit autour des cartes */
+  }
+
+  .icons {
+    width: 34%; /* Taille de l'icône réduite pour les tablettes */
+    margin-left: 30%;
+  }
+  .card h4 {
+    margin: 5% 0; /* Espace autour du titre */
+    font-size: 1em;
+    color: #555; /* Couleur du texte */
+    margin-bottom: -8%;
+    margin-right: 5%;
+  }
+}
+
+
+ 
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Aligne les cartes verticalement */
+    align-items: center; /* Centre les cartes horizontalement */
+   margin-top: 7%;
+  }
+
+  .card {
+    width: 50%; /* Ajuste la largeur pour les petits écrans */
+    margin: 10px 0; /* Marge entre les cartes */
+
+  }
+
+  .icons {
+    width: 30%; /* Ajuste la taille de l'icône pour les petits écrans */
+    margin-left: 34%;
+  }
+
+  .card h4 {
+    font-size: 1em; /* Ajuste la taille de la police pour les petits écrans */
+    margin-bottom: 3%;
   }
 }

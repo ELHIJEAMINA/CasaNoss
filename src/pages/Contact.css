@@ -19,21 +19,6 @@
   background-color: rgba(12, 9, 9, 0.07);
 
 }
-
-.boner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff; /* Couleur du texte */
-}
-
-.boner h1 {
-  font-size: 3rem; /* Taille du h1 */
-  font-weight: bold;
-  text-transform: uppercase;
-}
 /*title*/
 .pin {
   text-align: center;
@@ -183,3 +168,38 @@ button:hover {
   color:#555;
   margin-top: -2%;
 }
+/* Media query pour les petits appareils (téléphones et petites tablettes) */
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column; /* Disposition verticale pour les cartes */
+    align-items: center; /* Centre les cartes horizontalement */
+    gap: 20px; /* Réduit l'espace entre les cartes */
+  }
+
+  .cls {
+    width: 90%; /* Les cartes prennent 90% de la largeur */
+    max-width: 400px; /* Limite la largeur maximum des cartes */
+  }
+
+  .contact-title {
+    font-size: 2em; /* Réduit la taille du titre pour les petits écrans */
+  }
+}
+
+/* Media query pour les grandes tablettes (769px à 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact-cards {
+    justify-content: center; /* Garde les cartes centrées */
+    gap: 30px; /* Ajuste l'espace entre les cartes */
+  }
+
+  .cls {
+    width: 30%; /* Chaque carte prend 30% de la largeur pour 3 cartes par ligne */
+    max-width: none; /* Enlève la limite de largeur pour les grandes tablettes */
+  }
+
+  .contact-title {
+    font-size: 2.3em; /* Ajuste la taille du titre */
+  }
+}
+

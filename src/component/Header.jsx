@@ -10,9 +10,11 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">
-        <img src="logo.jpg" alt="Logo" loading="lazy" />
-      </div>
+    <div className="logo">
+  <a href="/">
+    <img src="logo.jpg" alt="Logo" loading="lazy" />
+  </a>
+</div>
       <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <a href="/">Acceuil</a>
         <a href="/AboutUs">Apropos</a>

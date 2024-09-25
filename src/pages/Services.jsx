@@ -154,10 +154,11 @@ function  Services() {
     </div>
   </div>
 </div>
-
-<div className="w-o-u">
+<div className='tetre'>
 <h1>Pourquoi Nous Choisir ?</h1>
 <h2>Votre Partenaire de Nettoyage de Confiance</h2>
+</div>
+<div className="w-o-u">
   <div className="caprd">
     <div className="wicon">
       <i className="fas fa-star"></i>

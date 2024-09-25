@@ -18,21 +18,6 @@
   height: 100%;
   filter: brightness(50%);
 }
-
-.bonow-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #333; /* Couleur du texte */
-}
-
-.bonow h1 {
-  font-size: 3rem; /* Taille du h1 */
-  font-weight: bold;
-  text-transform: uppercase;
-}
 /*next sect*/
 .services-container {
   display: grid;
@@ -152,23 +137,76 @@
   margin-top: 1%;
   font-weight: bold;
 }
-/*nxt sect */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr; /* Une carte par ligne */
+    padding: 20px; /* Réduit le padding pour les petits écrans */
+  }
 
-.w-o-u h1 {
-  font-size: 2.5em;
-  color: #E1AD01; /* Couleur principale */
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 10px;
-  position: relative;
+  .service-card {
+    height: auto; /* Ajuste la hauteur pour s'adapter au contenu */
+  }
+
+  .service-title {
+    font-size: 1.2em; /* Ajuste la taille du texte sur les petits écrans */
+  }
+
+  .service-description p{
+    font-size: 0.75em;
+  }
+  .pani h1{
+    font-size: 2em;
+  }
+  .pani h3::before{
+    display: none;
+  }
+ 
 }
 
 
-.w-o-u h2 {
+/* Pour les grandes tablettes (entre 769px et 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne comme sur desktop */
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .service-card {
+    height: 350px; /* Réduit légèrement la hauteur pour les tablettes */
+  }
+  
+  .service-title {
+    font-size: 1em; /* Ajuste la taille du texte sur les petits écrans */
+  }
+  .pani h3::before{
+    display: none;
+  }
+  .service-description p{
+    font-size: 0.75em;
+  }
+ 
+}
+/*nxt sect */
+
+.tetre h1 {
+  font-size: 2.3em;
+  color: #E1AD01; /* Couleur principale */
+  font-family: 'Arial', sans-serif;
+  margin-bottom:1%;
+  position: relative;
+ text-align: center;
+ font-weight: bold;
+}
+
+
+.tetre h2 {
   font-size: 1.5em;
   color: #555;
   font-style: italic;
   margin-top: 0;
   margin-bottom: 30px; /* Espacement sous le sous-titre */
+  text-align: center;
 }
 
 .w-o-u {
@@ -211,9 +249,44 @@
   color: #555;
 }
 
-/* Assurez-vous que les cartes restent 3 par ligne sur petits écrans */
+/* Media query pour les petits appareils (téléphones et petites tablettes) */
 @media (max-width: 768px) {
   .w-o-u {
-    justify-content: space-between;
+    justify-content: center; /* Centre les cartes */
+    padding: 5% 2%; /* Réduit les marges autour des cartes */
+  }
+
+  .caprd {
+    width: 90%; /* Chaque carte prend 100% de la largeur */
+    margin-bottom: 20px; /* Ajoute un espace sous chaque carte */
+  }
+  .tetre h2{
+    text-align: center;
+  }
+  .tetre h1{
+    text-align: center;
+  }
+  
+}
+/* Media query pour les grandes tablettes (769px à 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .w-o-u {
+    justify-content: space-between; /* Garde l'espacement entre les cartes */
+    padding: 5% 4%; /* Ajuste le padding si nécessaire */
+  }
+
+  .caprd {
+    width: 30%; /* Chaque carte prend 30% de la largeur pour 3 cartes par ligne */
+    margin-bottom: 20px; /* Ajoute un espace sous chaque carte */
+  }
+  .tetre h2{
+    text-align: center;
+  }
+  .tetre h1{
+    text-align: center;
+    
+  }
+  .tetre{
+    margin-top: 10%;
   }
 }

@@ -128,6 +128,68 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2); /* Fond transparent au survol */
 }
 
+/* Media Queries */
+
+/* Pour téléphones - Cache l'image */
+@media (max-width: 600px) {
+  .image-section {
+    display: none; /* Cache l'image */
+  }
+
+  .text-section {
+    width: 100%; /* Le texte prend toute la largeur */
+  }
+
+  .text-section h1, .text-section h2, .text-section p {
+    font-size: 1.4em; /* Taille de texte adaptée aux téléphones */
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .long-button, .transparent-button {
+    width: 100%; /* Les boutons prennent toute la largeur */
+  }
+}
+
+/* Pour tablettes - Réduire la taille de l'image */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .containya {
+    flex-direction: column; /* Empile l'image et le texte */
+    margin-top: 45%; /* Ajoute un espace pour compenser l'absence de la bannière */
+    margin-bottom: 8%;
+    padding-top: 2%; /* Optionnel : Ajoute un peu de padding pour donner plus d'air */
+  }
+
+  .image-section {
+    height: 40vh; /* Réduit la taille de l'image */
+    border-radius: 5%;
+  }
+
+  .text-section {
+    width: 100%; /* Le texte prend toute la largeur */
+  }
+
+  .text-section h1, .text-section h2, .text-section p {
+    font-size: 1.8em; /* Taille de texte adaptée aux tablettes */
+  }
+}
+
+/* Pour les téléphones (Samsung ou autres petits écrans) */
+@media (max-width: 600px) {
+  .containya {
+    padding-top: 100px; /* Ajustez en fonction des besoins, plus d'espace pour petits écrans */
+  }
+
+  .text-section h1 {
+    font-size: 1.4em; /* Ajustement de la taille de police pour un meilleur rendu sur mobile */
+  }
+
+  .text-section {
+    padding: 10px; /* Réduire le padding pour les petits écrans */
+  }
+}
 /*next section*/
 .banner {
   background-color: rgb(255, 255, 255);
@@ -182,15 +244,9 @@ html, body {
     display: none; /* Cache la bannière sur les écrans de moins de 768px */
   }
 }
-/* Media query pour tablettes (visible sur les écrans entre 768px et 1024px) */
-@media (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .banner {
-    display: none;/* Assure que la bannière est visible sur tablette */
-  }
-  }
-@media (max-width: 600px) {
-  .banner {
-    display: none; /* Cache la bannière sur les mini-tablettes */
+    display: none; /* Cache la bannière sur les tablettes */
   }
 }
 /*next section*/
@@ -232,7 +288,59 @@ html, body {
   margin-right: 5%;
 }
 
+/* Responsive pour grandes tablettes (ex: iPad) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-container {
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante */
+    justify-content: center; /* Centre les cartes dans le conteneur */
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+    margin-top: 20%;
+  }
 
+  .card {
+    width: 24%; /* Largeur augmentée pour les tablettes */
+    height: auto; /* Ajuste la hauteur selon le contenu */
+    margin: 2% 1%; /* Espace plus petit autour des cartes */
+  }
+
+  .icons {
+    width: 34%; /* Taille de l'icône réduite pour les tablettes */
+    margin-left: 30%;
+  }
+  .card h4 {
+    margin: 5% 0; /* Espace autour du titre */
+    font-size: 1em;
+    color: #555; /* Couleur du texte */
+    margin-bottom: -8%;
+    margin-right: 5%;
+  }
+}
+
+
+ 
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Aligne les cartes verticalement */
+    align-items: center; /* Centre les cartes horizontalement */
+   margin-top: -5%;
+  }
+
+  .card {
+    width: 50%; /* Ajuste la largeur pour les petits écrans */
+    margin: 10px 0; /* Marge entre les cartes */
+
+  }
+
+  .icons {
+    width: 30%; /* Ajuste la taille de l'icône pour les petits écrans */
+    margin-left: 34%;
+  }
+
+  .card h4 {
+    font-size: 1em; /* Ajuste la taille de la police pour les petits écrans */
+    margin-bottom: 3%;
+  }
+}
 /*next section*/
 
 .contain{
@@ -260,7 +368,7 @@ html, body {
 
 .left-section h3 {
   font-size: 2rem;
-  color: #efa12e;
+  color: #E1AD01;
   margin-bottom:2%;
 }
 
@@ -328,6 +436,91 @@ html, body {
 .image-top img {
   margin-left: 19%;
 }
+
+/* Media Queries pour Téléphones */
+@media (max-width: 767px) {
+  .contain {
+    flex-direction: column; /* Assure que la disposition reste en colonne sur mobile */
+    margin-top: 8%;
+  }
+
+  .left-section {
+    padding: 1rem; /* Réduit le padding sur mobile */
+  }
+
+  .right-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligne les images en haut */
+    width: 100%; /* Prend toute la largeur */
+    margin-top: 1rem; /* Espace entre texte et images */
+  }
+
+  .image-wrapper {
+    display: none;
+  }
+
+  .image-top img,
+  .image-overlay img {
+   display: none;
+  }
+  .left-section {
+    flex: 1.4; /* Prend plus de place que la section de droite */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    color: #555;
+    background-color: rgba(249, 249, 249, 0.8); /* Couleur de fond pour le texte */
+    height: auto; /* Ajuste la hauteur */
+    margin-left: 2%;
+    margin-top: 20px; /* Ajoute un espacement pour descendre la section */
+    width:100%;
+  }
+}@media (min-width: 768px) and (max-width: 1024px) {
+  .contain {
+    flex-direction: row; /* Reste en disposition horizontale comme le desktop */
+    justify-content: space-between; /* Espace égal entre les sections */
+    align-items: center;
+    height: 100vh; /* Maintient la hauteur du viewport */
+    padding: 2%;
+  }
+
+  .left-section {
+    flex: 1.4; /* Prend la même place que sur desktop */
+    width: 50%; /* Largeur similaire au desktop */
+    padding: 1rem; /* Réduit le padding pour ne pas créer de débordements */
+    margin-top: 0; /* Retire l'espacement supplémentaire pour tablette */
+    margin-left: 2%; /* Légère marge à gauche */
+    box-sizing: border-box; /* S'assure que padding et bordures sont inclus dans la largeur */
+    overflow-wrap: break-word; /* Empêche le texte de déborder en cassant les mots si nécessaire */
+  }
+
+  .left-section h1, .left-section h3, .left-section p {
+    font-size: 1.2rem; /* Ajuste la taille de la police pour tablette */
+    line-height: 1.4; /* Augmente l'interligne pour une meilleure lisibilité */
+  }
+
+  .right-section {
+    flex: 1; /* Prend la même place que sur desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Largeur similaire au desktop */
+    margin-left: 5%;
+    margin-top: 0; /* Pas de marge supérieure pour tablette */
+  }
+
+  .image-top img,
+  .image-overlay img {
+    width: 80%; /* Taille des images comme sur desktop */
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+
 /*next section*/
 .layout {
   display: flex;
@@ -338,6 +531,7 @@ html, body {
   padding: 1%;
   margin-top: 10%;
   margin-bottom: 15%;
+  position: relative; 
 }
 
 .abo {
@@ -345,6 +539,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .rounded-image {
@@ -402,6 +597,170 @@ font-size: 1.01em; /* Converti la taille en pourcentage */
 
 .btn-abowt:hover {
   background-color: #d48f1a;
+}
+/* Media query pour les téléphones */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column; /* Change la disposition en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    height: auto; /* Permet à la hauteur de s'ajuster selon le contenu */
+    padding: 5%;
+    margin-top: -30%; /* Réduit l'espace entre ce conteneur et le précédent */
+  }
+
+  .abo {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%; /* Réduit l'espacement entre l'image et le texte */
+  }
+
+  .rounded-image {
+    width: 40%; /* Réduit la taille de l'image pour les petits écrans */
+    margin-right: 0;
+    margin-top: 25%; /* Réduit l'espace entre l'image et le conteneur précédent */
+    border-radius: 50%; /* Arrondit davantage l'image si nécessaire */
+  }
+
+  .abowt {
+    order: 2;
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .abowt h1 {
+    font-size: 1.8rem;
+  }
+
+  .abowt h3 {
+    font-size: 1.3rem;
+  }
+
+  .abowt p {
+    font-size: 1rem;
+    margin-bottom: 5%;
+  }
+
+  .abowt a {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+/*pour samsung */
+@media only screen 
+and (max-width: 414px) {
+
+.layout {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* S'assurer que la largeur est bien définie */
+  height: auto; /* Auto ajustement de la hauteur */
+  padding: 5% 2%; /* Ajustement des marges/paddings */
+  margin-top: 10%; /* Évite que le contenu monte au-dessus de l'autre */
+  margin-bottom: 10%;
+}
+
+.abo {
+  order: 1; /* L'image reste au-dessus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* S'assurer que l'image ne dépasse pas */
+  margin-bottom: 5%; /* Ajouter un peu d'espacement */
+}
+
+.rounded-image {
+  width: 70%; /* Limiter la taille de l'image sur petits écrans */
+  height: auto; /* Garder le ratio aspect de l'image */
+  margin-right: 0; /* Éviter que l'image déborde */
+  margin-top: 26%; /* Espace sous l'image */
+  border-radius: 50%; /* Garde l'image arrondie */
+}
+
+.abowt {
+  order: 2; /* Le texte reste sous l'image */
+  width: 90%; /* Limiter la largeur pour éviter le débordement */
+  margin: 0 auto; /* Centrer le texte */
+  padding: 5%; /* Ajuster le padding pour les petits écrans */
+  text-align: center; /* Centrer le texte */
+}
+
+.abowt h1 {
+  font-size: 1.8rem; /* Ajuster la taille du texte pour les petits écrans */
+}
+
+.abowt h3 {
+  font-size: 1.3rem; /* Ajuster la taille des sous-titres */
+}
+
+.abowt p {
+  font-size: 1rem;
+  margin-bottom: 5%;
+}
+
+.abowt a {
+  width: 100%; /* Les boutons prennent toute la largeur */
+  height: 40px; /* Ajuster la hauteur du bouton */
+  font-size: 1rem;
+}
+
+
+
+}
+/* Media query pour les tablettes */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .layout {
+    flex-direction: row; /* Garder la disposition en ligne comme sur desktop */
+    align-items: center; 
+    justify-content: space-between;
+    height: auto;
+    padding: 1%;
+    margin-top: 0; /* Ajuster le margin-top pour qu'il soit comme sur desktop */
+  }
+
+  .abo {
+    order: 1; /* Garder l'image à gauche */
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 0; /* Enlever l'espace entre l'image et le texte */
+  }
+
+  .rounded-image {
+    width: 70%; /* Taille de l'image similaire à celle du desktop */
+    margin-right: -20%; 
+    border-radius: 30%; /* Garder l'arrondi de l'image */
+  }
+
+  .abowt {
+    order: 2; /* Garder la section texte à droite */
+    width: 50%; /* Ajuster la largeur comme sur desktop */
+    padding: 2%;
+    text-align: left; /* Aligner le texte à gauche comme sur desktop */
+    margin-right: 6%;
+  }
+
+  .abowt h1 {
+    font-size: 2rem; /* Taille similaire au desktop */
+  }
+
+  .abowt h3 {
+    font-size: 1.5rem; /* Taille similaire au desktop */
+  }
+
+  .abowt p {
+    font-size: 1rem;
+  }
+
+  .abowt a {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+  }
 }
 /*next section*/
 .box{
@@ -493,6 +852,117 @@ font-size: 2.1em;
 .pub-button:hover {
   background-color: #d48f1a;/*refaire*/
 }
+
+/* Media query pour grandes tablettes (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .box {
+    flex-direction: column; /* Empile les sections verticalement */
+    height: auto; /* Laisse la hauteur s'adapter */
+    padding: 3%; /* Ajuste le padding */
+  }
+
+  .lefti {
+    padding: 2%;
+    margin-bottom: 2%;
+  }
+
+  .pub-buttons {
+    margin-left: 0; /* Centre les boutons */
+    margin-top: -2%;
+  }
+
+  .pub-button, .pub-buttan {
+    width: 100%; /* Les boutons prennent toute la largeur */
+    margin-bottom: -3%;
+  }
+
+  .lefti h1, .lefti h3, .lefti p {
+    text-align: center; /* Centre le texte */
+  }
+
+  .lefti h3 {
+    font-size: 1.8em; /* Ajuste la taille de la police */
+  }
+
+  .lefti h1 {
+    font-size: 2em; /* Ajuste la taille de la police */
+  }
+
+  .lefti p {
+    font-size: 1.2em; /* Ajuste la taille de la police */
+  }
+}
+  
+
+/* Styles spécifiques pour les tablettes plus petites (600px - 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .lefti {
+    padding: 3%;
+    margin-bottom: 2%;
+  }
+
+  .pub-buttons {
+    margin-left: 0;
+    margin-top: 5%;
+  }
+
+  .pub-button, .pub-buttan {
+    width: 100%;
+  }
+
+  .lefti h3 {
+    font-size: 1.6em;
+  }
+
+  .lefti h1 {
+    font-size: 1.8em;
+  }
+
+  .lefti p {
+    font-size: 1.1em;
+  }
+}
+
+
+/* Media query pour petits portables et smartphones (max-width: 600px) */
+@media (max-width: 600px) {
+  .box {
+    flex-direction: column;
+    height: auto;
+    padding: 10% 3%;
+  }
+
+  .lefti {
+    padding: 5%;
+    margin-bottom: 3%;
+  }
+
+  .pub-buttons {
+    margin-left: 0;
+    margin-top: 5%;
+  }
+
+  .pub-button, .pub-buttan {
+    width: 100%;
+  }
+
+  .lefti h3 {
+    font-size: 1.5em;
+  }
+
+  .lefti h1 {
+    font-size: 1.7em;
+  }
+
+  .lefti p {
+    font-size: 1em;
+  }
+}
 /*next section */
 .panel {
   text-align: center;
@@ -563,6 +1033,46 @@ font-size: 2.1em;
   font-size: 1.3em;
   font-weight: bold;
 }
+/* Media query pour les téléphones */
+@media (max-width: 600px) {
+  .services {
+    flex-direction: column; /* Aligne les cartes verticalement */
+    align-items: center; /* Centre les cartes horizontalement */
+  }
+
+  .carda {
+    width: 90%; /* Ajuste la largeur des cartes */
+    height: 60vw; /* Hauteur fixe pour toutes les cartes */
+    margin-bottom: 20px; /* Espace entre les cartes */
+    box-sizing: border-box; /* Assure que le padding et la bordure sont inclus dans la taille */
+  }
+
+  
+  .panel h3::before{
+    display: none;
+
+    }
+  
+}
+
+/* Media query pour les tablettes */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .services {
+    flex-direction: row; /* Reste en disposition horizontale comme le desktop */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    justify-content: center; /* Centre les cartes horizontalement */
+  }
+
+  .carda {
+    width: calc(33.33% - 1.2vw); /* Trois cartes par ligne */
+    height: 20vw; /* Hauteur de la carte */
+  }
+  .panel h3::before{
+    display: none;
+    }
+    
+}
+
 /*next section */
 .wrapper {
   display: flex;
@@ -653,19 +1163,100 @@ font-weight: bold;
 .pqnous{
   color: #E1AD01;
 }
-button {
-  padding: 10px 20px;
-  background-color: #FCDC12; /* Couleur jaune pour le bouton */
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-  align-self: flex-start; /* Aligne le bouton à gauche */
-  margin-top:10%; /* Espace au-dessus du bouton */
+
+/* Media queries pour les téléphones (max-width: 600px) */
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column; /* Place les images en haut et le texte en bas */
+    padding: 10px;
+  }
+
+  .left, .right {
+    width: 100%; /* Chaque section prend 100% de la largeur */
+    margin-bottom: 20px; /* Ajoute un espace entre les sections */
+  }
+
+  .top-images, .bottom-images {
+    flex-direction: column; /* Les images s'affichent en colonne (une au-dessus de l'autre) */
+    align-items: center; /* Centre les images */
+  }
+
+  .top-images img, .bottom-images img {
+    width: 80%; /* Les images prennent 80% de la largeur sur mobile */
+    margin-bottom: 20px; /* Ajoute un espace entre les images */
+  }
+
+  .text-sections {
+    width: 100%; /* Le texte prend 100% de la largeur */
+    height: auto; /* Hauteur auto pour s'adapter au contenu */
+    margin-top: 20px;
+  }
+
+  .text-sections h1, .text-sections h3, .text-sections p {
+    text-align: center; /* Centre le texte sur mobile */
+  }
 }
 
-button:hover {
-  background-color: #efa12e; /* Changement de couleur au survol */
+/* Media queries pour les petites tablettes (entre 600px et 768px) */
+@media (min-width: 600px) and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column; /* Empile les images et le texte comme sur les téléphones */
+  }
+
+  .left, .right {
+    width: 100%; /* Les sections prennent toute la largeur */
+    margin-bottom: 20px;
+  }
+
+  .top-images, .bottom-images {
+    flex-direction: column; /* Les images s'empilent en colonne */
+    align-items: center;
+  }
+
+  .top-images img, .bottom-images img {
+    width: 80%; /* Les images prennent 80% de la largeur */
+    margin-bottom: 20px;
+  }
+
+  .text-sections {
+    width: 100%;
+    height: auto; /* Ajuste la hauteur automatiquement */
+  }
+
+  .text-sections h1, .text-sections h3, .text-sections p {
+    text-align: center; /* Centre le texte sur petites tablettes */
+  }
 }
+
+/* Media queries pour les grandes tablettes (768px à 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: row; /* Conserve la disposition en lignes comme sur desktop */
+  }
+
+  .left {
+    width: 60%; /* Largeur des images comme sur desktop */
+    margin-top: 10%;
+  }
+
+  .right {
+    width: 40%; /* Largeur du texte comme sur desktop */
+  }
+
+  .top-images img, .bottom-images img {
+    width: 48%; /* Chaque image prend environ 50% de la largeur */
+  }
+
+  .text-sections {
+    width: 120%;
+    height: 68vh; /* Hauteur fixe pour correspondre à l'image-section */
+  }
+
+  .text-sections h1, .text-sections h3, .text-sections p {
+    text-align: left; /* Le texte est aligné à gauche sur grandes tablettes */
+  }
+}
+
 /*next section*/
 .frame {
   position: relative;
@@ -739,6 +1330,47 @@ button:hover {
 .circle-content button:hover {
   background-color: #d48f1a;
 }
+button {
+  padding: 10px 20px;
+  background-color: #FCDC12; /* Couleur jaune pour le bouton */
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  align-self: flex-start; /* Aligne le bouton à gauche */
+  margin-top:10%; /* Espace au-dessus du bouton */
+}
+
+button:hover {
+  background-color: #efa12e; /* Changement de couleur au survol */
+}
+/* Media query pour les téléphones avec une largeur supérieure à 600px */
+@media (max-width: 768px) {
+  .circle-content {
+    width: 95vw; /* Agrandit le cercle */
+    height: 95vw; /* Assure que le cercle reste un cercle */
+    max-width: 430px; /* Limite la taille maximale */
+    max-height: 430px; /* Limite la taille maximale */
+    padding: 30px; /* Augmente le padding */
+  }
+
+  .circle-content h1 {
+    font-size: 1.5em; /* Augmente la taille du titre */
+  }
+
+  .circle-content h3 {
+    font-size: 1.5em; /* Augmente la taille du sous-titre */
+  }
+
+  .circle-content p {
+    font-size: 1.2em; /* Augmente la taille du texte */
+  }
+
+  .circle-content button {
+    padding: 10px 15px; /* Ajuste le padding du bouton */
+    font-size: 1em; /* Ajuste la taille de la police du bouton */
+  }
+}
+
 /*next section*/
 .contact-cantainer {
   text-align: center;
@@ -807,5 +1439,47 @@ button:hover {
 
   .contact-container h2, .contact-container p {
     font-size: 1.8rem; /* Réduction de la taille des polices sur petits écrans */
+  }
+}
+
+/*next section*/
+.Contner {
+  max-width: 1550px;
+  margin: 0 auto;
+  filter: brightness(80%);
+}
+
+.locations-section {
+  margin-top: 30px;
+}
+
+
+
+.locations-section iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+}
+.cartes-container {
+  position: relative;
+  /* Ajoutez d'autres styles pour votre conteneur de cartes ici */
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .banners-content h1 {
+    font-size: 1.5em;
+  }
+
+  .Container {
+    padding: 0 10px;
+  }
+
+  .location-section iframe {
+    height: 200px;
   }
 }

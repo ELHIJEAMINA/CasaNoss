@@ -35,7 +35,7 @@ function Footer() {
            <div><p className='footer-text'>Expert en nettoyage à Agadir, Taroudant, et Marrakech. <br /> Nos services professionnels garantissent un environnement propre, <br /> sain et respectueux de l'environnement.  <br />Nous sommes votre partenaire pour un nettoyage impeccable.</p></div>
           </div>
           <div className="footer-links"> 
-            <h3>Liens Utiles</h3>
+            <h3><strong>Liens Utiles</strong></h3>
             <ul>
               <li><a href="/AboutUs">À Propos de Nous</a></li>
               <li><a href="/Services"> Services</a></li>
@@ -45,9 +45,9 @@ function Footer() {
           
           </div>
           <div className="footer-contact">
-    <h3> Contacts</h3>
+    <h3> <strong>Nos Contacts</strong></h3>
     <ul>
-        <li> Tél : <a href="tel:+0655760051">+212 655760051 </a></li>
+        <li> Tél : <a href="tel:+0655760051">+212 655760051 , 07 72 86 51 09 </a></li>
         <li> Addresse : <a href=''>Agadir(Siège) , Marrakech , Taroudant</a> </li>
         <li>Email: <a href="mailto:Biocleaners@service.com">casanoss.siege@gmail.com</a></li>
     </ul>

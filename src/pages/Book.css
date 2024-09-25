@@ -49,6 +49,59 @@
 .rese{
   color: #E1AD01;
 }
+
+/* Media Queries */
+
+/* Pour les portables et petites tablettes (max-width: 768px) */
+@media (max-width: 768px) {
+  .bano {
+    height: 30vh; /* Réduit la hauteur pour les petits écrans */
+    margin-top: 15%;
+  }
+
+  .bano h1 {
+    font-size: 1.2rem; /* Taille du texte réduite pour les petits écrans */
+  }
+
+  .bano p {
+    font-size: 0.9rem; /* Taille du paragraphe réduite */
+  }
+
+  .bano-content {
+    white-space: normal; /* Permet au texte de passer à la ligne si nécessaire */
+  }
+}
+
+/* Pour les grandes tablettes (769px à 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bano {
+    height: 35vh; /* Ajuste la hauteur légèrement plus petite que sur desktop */
+   
+  }
+
+  .bano h1 {
+    font-size: 1.8rem; /* Ajuste la taille du texte pour les grandes tablettes */
+  }
+
+  .bano p {
+    font-size: 1rem; /* Taille du paragraphe pour les grandes tablettes */
+  }
+}
+
+/* Pour les écrans de bureau (plus de 1024px) */
+@media (min-width: 1025px) {
+  .bano {
+    height: 40vh; /* Hauteur par défaut pour les écrans de bureau */
+  }
+
+  .bano h1 {
+    font-size: 2rem; /* Taille par défaut du texte */
+  }
+
+  .bano p {
+    font-size: 1rem; /* Taille par défaut du paragraphe */
+  }
+}
 /*nexts*/
 .reservation-container {
   padding: 20px;
