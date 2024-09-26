@@ -55,7 +55,7 @@ function Footer() {
 
         </div>
         <div className='bb1'>
-        <p className="copyright">2024 © All rights reserved by <span className='bb'>CasaNoss</span></p>
+        <p className="copyright">2024 © All rights reserved by <span className='bb'><strong>CasaNoss</strong></span></p>
         </div>
        
       
