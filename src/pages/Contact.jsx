@@ -1,8 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+/* global gtag */
 import "./Contact.css";
 
 const Contact = () => {
   useEffect(() => {
+     // Ajouter la balise gtag.js
+     const script = document.createElement("script");
+     script.src = "https://www.googletagmanager.com/gtag/js?id=AW-11270497323";
+     script.async = true;
+     document.head.appendChild(script);
+ 
+     const inlineScript = document.createElement("script");
+     inlineScript.innerHTML = `
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'AW-11270497323');
+     `;
+     document.head.appendChild(inlineScript);
+
     const form = document.getElementById('contactForm');
     if (form) {
       form.addEventListener('submit', function (e) {
@@ -21,6 +37,8 @@ const Contact = () => {
         // Open WhatsApp with the message
         const whatsappUrl = `https://wa.me/212655760051?text=${whatsappMessage}`;
         window.open(whatsappUrl, '_blank');
+        gtag('event', 'conversion', {'send_to': 'AW-11270497323/O-oKCLyDsdMZEKvImP4p'}); // Demande de devis conversion
+        gtag('event', 'conversion', {'send_to': 'AW-11270497323/Va3iCL-DsdMZEKvImP4p'}); // Contact conversion
       });
     }
   }, []);

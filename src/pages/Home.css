@@ -163,8 +163,7 @@ html, body {
   }
 
   .image-section {
-    height: 40vh; /* Réduit la taille de l'image */
-    border-radius: 5%;
+    display: none;
   }
 
   .text-section {
@@ -984,7 +983,7 @@ font-size: 2.1em;
   left: 0; /* Positionne le trait à gauche */
   height:5%; /* Épaisseur du trait */
   width:4%; /* Longueur du trait */
-  background-color: #efa12e; /* Couleur du trait */
+  background-color: #E1AD01; /* Couleur du trait */
   margin-left: 34%;
   margin-top: 1%;
   font-weight: bold;
@@ -1343,33 +1342,46 @@ button {
 button:hover {
   background-color: #efa12e; /* Changement de couleur au survol */
 }
-/* Media query pour les téléphones avec une largeur supérieure à 600px */
+/* Responsive: Media query pour les tablettes et téléphones */
 @media (max-width: 768px) {
   .circle-content {
-    width: 95vw; /* Agrandit le cercle */
-    height: 95vw; /* Assure que le cercle reste un cercle */
-    max-width: 430px; /* Limite la taille maximale */
-    max-height: 430px; /* Limite la taille maximale */
-    padding: 30px; /* Augmente le padding */
+    width: 80vw; /* Taille plus grande pour le cercle sur petits écrans */
+    height: 80vw; /* Assure que le cercle reste circulaire */
+    max-width: 300px; /* Limite la taille maximale */
+    max-height: 300px;
+    padding: 15px; /* Diminue légèrement le padding pour s'adapter */
   }
 
   .circle-content h1 {
-    font-size: 1.5em; /* Augmente la taille du titre */
+    font-size: 1.2em; /* Taille réduite pour les titres */
+    margin-bottom: 1%;
   }
 
   .circle-content h3 {
-    font-size: 1.5em; /* Augmente la taille du sous-titre */
+    font-size: 1.1em; /* Taille réduite pour les sous-titres */
+    margin-bottom: 3%;
   }
 
   .circle-content p {
-    font-size: 1.2em; /* Augmente la taille du texte */
+    font-size: 1em; /* Taille réduite pour les paragraphes */
+    margin-bottom: 4%;
   }
 
   .circle-content button {
-    padding: 10px 15px; /* Ajuste le padding du bouton */
-    font-size: 1em; /* Ajuste la taille de la police du bouton */
+    font-size: 0.75em; /* Réduction de la taille du texte dans le bouton */
+    padding: 6px 10px; /* Taille plus petite du bouton */
+    margin-top: 3%; /* Ajuste l'espacement au-dessus du bouton */
+    width: 60%; /* Ajuste la taille du bouton pour qu'il ne dépasse pas */
+  }
+
+  button {
+    padding: 8px 16px; /* Ajuste le padding du bouton */
+    font-size: 0.7em; /* Taille ajustée pour correspondre au reste */
+    margin-top: 5%;
   }
 }
+
+
 
 /*next section*/
 .contact-cantainer {
@@ -1435,10 +1447,11 @@ button:hover {
 
   .cardcont {
     padding: 2%;
+    width:90%;
   }
 
   .contact-container h2, .contact-container p {
-    font-size: 1.8rem; /* Réduction de la taille des polices sur petits écrans */
+    font-size: 1.5rem; /* Réduction de la taille des polices sur petits écrans */
   }
 }
 

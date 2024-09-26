@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import './Header.css';
 
 const Header = () => {
@@ -14,10 +14,11 @@ const Header = () => {
   <a href="/">
     <img src="logo.jpg" alt="Logo" loading="lazy" />
   </a>
+
 </div>
       <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <a href="/">Acceuil</a>
-        <a href="/AboutUs">Apropos</a>
+        <a href="/AboutUs">Àpropos</a>
         <a href="/Services">Services</a>
         <a href="/Contact">Contact</a>
         <a href="/Book" className={`reservation ${isMenuOpen ? 'no-bg' : ''}`}>

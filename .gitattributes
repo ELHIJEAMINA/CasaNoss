@@ -1,1 +1,12 @@
 * text=auto
+# For all text files
+* text=auto
+
+# To ensure JavaScript files use LF
+*.js text eol=lf
+
+# To ensure HTML files use LF
+*.html text eol=lf
+
+# To ensure CSS files use LF
+*.css text eol=lf

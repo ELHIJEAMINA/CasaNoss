@@ -53,6 +53,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
     "css-minimizer-webpack-plugin": "^7.0.0",
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.94.0",

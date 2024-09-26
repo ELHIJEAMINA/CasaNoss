@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import './Footer.css'; // Assurez-vous que le chemin est correct
 
 function Footer() {
@@ -9,7 +9,7 @@ function Footer() {
         <div className="social">
         <a
     data-mdb-ripple-init
-    className="btn text-white btn-floating m-1"
+       className="btn text-white btn-floating m-1"
     style={{ backgroundColor: '#25D366' }}  // Couleur officielle de WhatsApp
     href="https://wa.me/655760051"  // Remplacez par votre numéro WhatsApp au format international
     role="button"

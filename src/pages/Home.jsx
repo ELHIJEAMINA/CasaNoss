@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link } from 'react-router-dom';
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -177,7 +177,7 @@ function Home() {
     <h1><strong>Experts en Nettoyage Professionnel</strong></h1>
     <h3><strong>Services à Agadir, Marrakech & Taroudant</strong></h3>
     <p>Avec <strong>Casa<span className='pqnous'>Noss</span></strong> Découvrez nos solutions écologiques et efficaces pour tous types de nettoyage.</p>
-    <button><a href='/Book'><strong>Réservez dès maintenant </strong></a></button>
+    <button ><a href='/Book'><strong>Réservez dès maintenant </strong></a></button>
   </div>
 </div>
 <div className="wrapper">
